@@ -6,7 +6,7 @@
 /*   By: afraccal <afraccal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 15:37:30 by afraccal          #+#    #+#             */
-/*   Updated: 2023/08/20 15:55:07 by afraccal         ###   ########.fr       */
+/*   Updated: 2023/08/21 09:50:42 by afraccal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 int main()
 {
     Data		*ptr = new Data;
-	Data		*new_ptr;
-	uintptr_t	raw;
-	Serializer	t;
+	Data		*d_ptr;
+	uintptr_t	pointer;
+	Serializer	s;
 
-	ptr->string = "test string data";
-	raw = t.serialize(ptr);
-	new_ptr = t.deserialize(raw);
-	std::cout << "new_ptr->string = " << new_ptr->string << std::endl;
+	ptr->string = "common string";
+	pointer = s.serialize(ptr);
+	d_ptr = s.deserialize(pointer);
+	std::cout << "d_ptr->string = " << d_ptr->string << std::endl;
     return(0);
 }
