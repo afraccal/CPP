@@ -1,9 +1,19 @@
-#include <iostream>
-#include <cstdlib>
-#include "Array.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: afraccal <afraccal@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/21 11:55:51 by afraccal          #+#    #+#             */
+/*   Updated: 2023/08/26 11:35:57 by afraccal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #define MAX_VAL 750
-int main(int, char**)
+#include "Array.hpp"
+
+int main()
 {
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
@@ -49,6 +59,12 @@ int main(int, char**)
     {
         numbers[i] = rand();
     }
-    delete [] mirror;//
+    delete [] mirror;
+    
+    Array<int> arr(10);
+
+	arr[2] = 22;
+	std::cout << arr.size() << " || " << arr[2] << std::endl;
+    
     return 0;
 }
