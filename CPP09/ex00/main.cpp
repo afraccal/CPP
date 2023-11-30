@@ -4,10 +4,12 @@ int main(int argc, char **argv)
 {
     if (argc!=2)
     {
-        std::cerr << "Wrong number of argument. Only one needed" << std::endl;
+        std::cerr << "Error: could not open file" << std::endl;
         return 0;
     }
-    BitcoinExchange date;
+    BitcoinExchange data;
 
-    date.read_file(argv[1]);
+    data.read_file(argv[1]);
+    data.converter();
+    return (0);
 }

@@ -11,14 +11,14 @@ class BitcoinExchange
 {
 private:
     std::map<int, float> database;
-//    std::multimap<int, float> convert;
+    std::multimap<int, float> map_convert;
 public:
     BitcoinExchange();
     BitcoinExchange(const BitcoinExchange &cpy);
     BitcoinExchange &operator=(const BitcoinExchange &cpy);
     ~BitcoinExchange();
     int read_file(std::string data);
-    void exchange(std::string data);
+    void converter();
 };
 
 #endif
